@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>クリスマスパーティ(テスト版)</title>
+  <link rel="stylesheet" href="css/comm.css">
+  <link rel="stylesheet" href="css/style_login.css">
+  <meta name="viewport" content=content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header_text">
+      <p>
+        Log IN
+      </p>
+    </div>
+    <button class="btn-menu"><img id="btn_img" src="./img/bars_24.png" /></button>
+    <nav>
+      <ul>
+        <li><a href="/">ホーム</a></li>
+        <li><a href="#">イベント情報</a></li>
+        <li><a href="/roulette">プレゼント交換会</a></li>
+        <li><a href="/zoom">オンライン参加</a></li>
+        <li><a href="login">Log IN</a></li>
+        <li><a href="/logout">Log OUT</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      const btn = document.querySelector('.btn-menu');
+      const nav = document.querySelector('nav');
+
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open-menu')
+      });
+    </script>
+  </header>
+  <div class="space"></div>
+  <div class="contents">
+    <div class="login_form">
+      <form method="POST" action="/login">
+        <p>
+          full name
+        </p>
+        <input type="text" name="username">
+        <p>
+          password
+        </p>
+        <input type="text" name="password">
+    </div>
+
+    <div class="submit">
+      <input type="submit" name="login" value="OK" class="submit_button">
+    </div>
+    </form>
+
+  </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+{
+  "users": [{
+    "name": "蛯澤皓斗",
+    "name_eng": "EBISAWA HIROTO",
+    "destination":""
+  }, {
+    "name": "梶田直哉",
+    "name_eng": "KAJITA NAOYA",
+    "destination":""
+  },{
+    "name": "山田恭史",
+    "name_eng": "YAMADA TAKAFUMI",
+    "destination":""
+  },{
+    "name": "春石誉人",
+    "name_eng": "GARUISHI YOSHITO",
+    "destination":""
+  },{
+    "name": "田中雅也",
+    "name_eng": "TANAKA MASAYA",
+    "destination":""
+  },{
+    "name": "八尋義範",
+    "name_eng": "YAHIRO YOSHINORI",
+    "destination":""
+  },{
+    "name": "原守男",
+    "name_eng": "HARA MORIO",
+    "destination":""
+  },{
+    "name": "山本昂哉",
+    "name_eng": "YAMAMOTO KOUYA",
+    "destination":""
+  },{
+    "name": "清水太一",
+    "name_eng": "SHIMIZU TAICHI",
+    "destination":""
+  }]
+}

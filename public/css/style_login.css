@@ -1,0 +1,53 @@
+.contents {
+  background-color: #EEDCB3;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.login_form {
+  font-size: 26px;
+  padding: 20px 20px;
+}
+
+.login_form input {
+  height: 10px;
+  width: 65vw;
+  padding: 20px 20px;
+  margin: 10px 20px;
+}
+
+input[type=text] {
+  font-size: 22px;
+  /*  transform: scale(0.8);*/
+}
+
+input[type=submit] {
+  -webkit-appearance: none;
+}
+
+.submit {
+  float: right;
+  margin-right: 60px;
+}
+
+.submit_button {
+
+  display       : inline-block;
+  border-radius: 0%;
+  /* 角丸       */
+  font-size: 18pt;
+  /* 文字サイズ */
+  text-align: center;
+  /* 文字位置   */
+  cursor: pointer;
+  /* カーソル   */
+  padding: 12px 24px;
+  /* 余白       */
+  background: #02A01C;
+  color: #000;
+  /* 文字色     */
+  line-height: 1em;
+  /* 1行の高さ  */
+  transition: .3s;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>クリスマスパーティ(テスト版)</title>
+  <meta name="viewport" content=content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
+
+<body>
+
+  <button class="btn">開く</button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+  $('.btn').on('click', function() {
+  console.log("btn clicked");
+  if ($(this).text() === '閉じる') {
+  $(this).text('開く');
+  } else {
+  $(this).text('閉じる');
+  }
+  });
+  </script>
+
+
+
+
+</body>
+
+</html>

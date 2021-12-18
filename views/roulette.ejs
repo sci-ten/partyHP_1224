@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>クリスマスパーティ(テスト版)</title>
+  <link rel="stylesheet" href="css/comm.css">
+  <link rel="stylesheet" href="css/style_roulette.css">
+  <meta name="viewport" content=content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header_text">
+      <p>
+        プレゼント交換会
+      </p>
+    </div>
+    <button class="btn-menu"><img id="btn_img" src="./img/bars_24.png" /></button>
+    <nav>
+      <ul>
+        <li><a href="/">ホーム</a></li>
+        <li><a href="#">イベント情報</a></li>
+        <li><a href="/roulette">プレゼント交換会</a></li>
+        <li><a href="/zoom">オンライン参加</a></li>
+        <li><a href="login">Log IN</a></li>
+        <li><a href="/logout">Log OUT</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      const btn = document.querySelector('.btn-menu');
+      const nav = document.querySelector('nav');
+
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open-menu')
+      });
+    </script>
+  </header>
+  <div class="space"></div>
+
+  <div class="contents">
+
+    <div class="roulette">
+      <div class="backimg">
+        <img class="backimg" src="img/red_back.jpg">
+      </div>
+      <div id="canvas"></div>
+
+    </div>
+    <div class="message_1">
+      <p>
+        こんばんは、<%= item %>さん
+      </p>
+    </div>
+
+
+    <div class="control_btn">
+      <input type="submit" name="next_mode" value="START" class="btn btn_start">
+    </div>
+
+    <div class="result">
+      <p>
+        プレゼントは
+      </p>
+      <p>
+      <div class="present">
+      </div>
+      </p>
+      <p>
+        からもらえます。
+      </p>
+    </div>
+    <a href ="/result">結果一覧</a>
+  </div>
+
+
+
+
+
+  <script src="/script/roulette.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+</body>
+
+</html>

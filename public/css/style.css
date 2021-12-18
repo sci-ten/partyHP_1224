@@ -1,0 +1,157 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #000;
+  font-family: "Century Gothic";
+}
+
+/*ヘッダー*/
+header {
+  display: block;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 110px;
+  z-index: 5;
+}
+
+.orna_1 {
+  height: 16px;
+  background: #02A01C;
+}
+
+.orna_2 {
+  height: 16px;
+  background: #FFFFFF;
+}
+
+.header_line {
+  height: 78px;
+  background: #AF011C;
+  display: flex;
+  align-items: center;
+}
+
+.page_title {
+  font-size: 20px;
+  font-family: 'HG丸ｺﾞｼｯｸM-PRO';
+  margin: 0px 4px;
+  padding: 0px 10px;
+}
+
+header #btn_img {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-menu {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+/* メニュー */
+/* ボタン */
+header li {
+  margin: 3rem 0;
+  font-size: 20px;
+}
+
+header a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-menu {
+  background: transparent;
+  color: #fff;
+  padding: .10rem 1rem;
+  cursor: pointer;
+}
+
+nav {
+  background: #02A01C;
+  position: absolute;
+  z-index: 1;
+  top: 110px;
+  right: 0;
+  overflow-x: hidden;
+  text-align: center;
+  transition: .5s;
+  width: 0;
+  /* ←100%から 0 に変更 */
+}
+
+/* メニューを開いた時 */
+nav.open-menu {
+  height: 100vh;
+  width: 100%;
+}
+
+/*コンテンツ*/
+.space {
+  width: 100vw;
+  height: 110px;
+}
+
+/*親要素1*/
+.part1 {
+  font-family: "HGS創英ﾌﾟﾚｾﾞﾝｽEB";
+  /*padding-top: 120px;*/
+  position: relative;
+}
+
+video {
+  z-index: 0;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.part1_text {
+  position: absolute;
+  z-index: 3;
+  color: #fff;
+  text-shadow: 0 0 20px #666;
+  font-size: 24px;
+  top: 50%;
+  left: 35%;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.video_mask {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100%;
+  background: url("../img/yokojima.png");
+  z-index: 2;
+}
+
+.part2 {
+  margin: 20px 0px;
+  color: #fff;
+  font-size: 22px;
+  width: 100vw;
+  background: #000;
+}
+
+.history {
+  padding: 10px 50px
+}
+
+.part3 {
+  margin: 20px 0px;
+  color: #fff;
+  font-size: 22px;
+  width: 100vw;
+  background: #000;
+  text-align: center;
+}

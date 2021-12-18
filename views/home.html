@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>クリスマスパーティ(テスト版)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div clas="header_ornament">
+      <div class="orna_1"></div>
+      <div class="orna_2"></div>
+    </div>
+
+    <div class="header_line">
+      <div class="page_title">
+        <p>編入生</p>
+        <p>クリスマスパーティ－2021</p>
+      </div>
+
+        <button class="btn-menu"><img id="btn_img" src="./img/bars_24.png" /></button>
+        <nav>
+          <ul>
+            <li><a href="/">ホーム</a></li>
+            <li><a href="#">イベント情報</a></li>
+            <li><a href="/roulette">プレゼント交換会</a></li>
+            <li><a href="/zoom">オンライン参加</a></li>
+            <li><a href="login">Log IN</a></li>
+            <li><a href="/logout">Log OUT</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <script>
+      const btn = document.querySelector('.btn-menu');
+      const nav = document.querySelector('nav');
+
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open-menu')
+      });
+    </script>
+  </header>
+
+  <div class="space">
+  </div>
+  <div class="part1">
+    <div class="video_mask"></div>
+    <h1 class="part1_text">農工大に散らばりし<br>陰キャがつどう夜</h1>
+
+    <video poster="./img/earth3_70.jpg" webkit-playsinline playsinline muted autoplay>
+      <source src="./video/earth3_6.mp4" />
+
+  </div>
+
+
+  <script>
+    $(window).ready(function() {
+      var video = document.getElementsByTagName('video')[0];
+      video.addEventListener('ended', function() {
+        video.load();
+        console.log("video_end");
+        video.autoplay = false;
+      }, false);
+    });
+  </script>
+
+  <div class="part2">
+    <div class="history">
+      <p>history</p>
+      <ul class="menu">
+        <li><a href="">2018</a></li>
+        <li><a href="">2019</a></li>
+        <li><a href="">2020</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="part3">
+    <div class="message">
+      <p>message</p>
+      <div class="message_contents">
+        <p>編入生クリスマスパーティ</p>
+        <p>4年連続!!</p>
+        <p>今年も開催!!</p>
+        <p>…予定あるやつおらんよな<br>（ﾟДﾟ）ｺﾞﾙｧ!!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</body>
+
+</html>
