@@ -139,6 +139,14 @@ app.post('/reset', (req, res) => {
   }
 });
 
+app.get('/event', (req, res) => {
+  if (req.session.username != undefined) {
+    res.render('event.html');
+  } else {
+    res.redirect('/login');
+  }
+});
+
 
 /**************/
 /*ログイン認証*/

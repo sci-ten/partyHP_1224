@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>クリスマスパーティ(テスト版)</title>
+  <title>クリスマスパーティ</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -22,18 +22,18 @@
         <p>クリスマスパーティ－2021</p>
       </div>
 
-        <button class="btn-menu"><img id="btn_img" src="./img/bars_24.png" /></button>
-        <nav>
-          <ul>
-            <li><a href="/">ホーム</a></li>
-            <li><a href="#">イベント情報</a></li>
-            <li><a href="/roulette">プレゼント交換会</a></li>
-            <li><a href="/zoom">オンライン参加</a></li>
-            <li><a href="login">Log IN</a></li>
-            <li><a href="/logout">Log OUT</a></li>
-          </ul>
-        </nav>
-      </div>
+      <button class="btn-menu"><img id="btn_img" src="./img/bars_24.png" /></button>
+      <nav>
+        <ul>
+          <li><a href="/">ホーム</a></li>
+          <li><a href="/event">イベント情報</a></li>
+          <li><a href="/roulette">プレゼント交換会</a></li>
+          <li><a href="/zoom">オンライン参加</a></li>
+          <li><a href="/login">Log IN</a></li>
+          <li><a href="/logout">Log OUT</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <script>
       const btn = document.querySelector('.btn-menu');
@@ -71,17 +71,139 @@
   <div class="part2">
     <div class="history">
       <p>history</p>
-      <ul class="menu">
-        <li><a href="">2018</a></li>
-        <li><a href="">2019</a></li>
-        <li><a href="">2020</a></li>
+      <ul class="timeline">
+        <li>
+          <dl>
+            <dt>2018.12.24</dt>
+            <dd>
+              <br><br><br>
+            </dd>
+          </dl>
+          <span class="border-line"></span>
+        </li>
+
+        <li>
+          <dl>
+            <dt>2019.12.24</dt>
+            <dd>
+              <br><br><br>
+            </dd>
+          </dl>
+          <span class="border-line"></span>
+        </li>
+
+        <li>
+          <dl>
+            <dt>2020.12.25</dt>
+            <dd>
+              <br><br><br>
+              <br><br><br>
+              <br><br><br>
+              <br><br><br>
+              <br><br><br>
+            </dd>
+          </dl>
+          <span class="border-line"></span>
+        </li>
+
+        <li>
+          <dl>
+            <dt>2021.12.24</dt>
+            <dd>
+            </dd>
+          </dl>
+        </li>
+
       </ul>
     </div>
+    <script>
+      //線が伸びるための設定を関数でまとめる
+      function ScrollTimelineAnime() {
+        $('.timeline li').each(function() { // それぞれのli要素の
+          var elemPos = $(this).offset().top; // 上からの高さ取得
+          var scroll = $(window).scrollTop(); // スクロール値取得
+          console.log(scroll);
+          var windowHeight = $(window).height(); // windowの高さ取得
+          var startPoint = 600; //線をスタートさせる位置を指定※レイアウトによって調整してください
+          if (scroll >= elemPos - windowHeight - startPoint) {
+            var H = $(this).outerHeight(true) //liの余白と高さを含めた数値を取得
+            //スクロール値から要素までの高さを引いた値を、liの高さの半分のパーセントで出す
+            var percent = (scroll + startPoint - elemPos) / (H / 2) * 100; //liの余白と高さの半分で線を100％に伸ばす
+
+            // 100% を超えたらずっと100%を入れ続ける
+            if (percent > 100) {
+              percent = 100;
+            }
+            // ボーダーの長さをセット
+            $(this).children('.border-line').css({
+              height: percent + "%", //CSSでパーセント指定
+            });
+          }
+        });
+      }
+
+      // 画面をスクロールをしたら動かしたい場合の記述
+      $(window).on('scroll', function() {
+        console.log("called");
+        ScrollTimelineAnime(); // 線が伸びる関数を呼ぶ
+      });
+
+      // ページが読み込まれたらすぐに動かしたい場合の記述
+      $(window).on('load', function() {
+        ScrollTimelineAnime(); // 線が伸びる関数を呼ぶ
+      });
+    </script>
+
+    <style>
+      /*タイムライン全体の設定*/
+      .timeline {
+        margin-top: 30px;
+        max-width: 400px;
+        width: 100%;
+        /*margin: 50px auto;*/
+        padding: 0 30px;
+      }
+
+      .timeline li {
+        /*線の起点とするためrelativeを設定*/
+        position: relative;
+        list-style: none;
+        padding: 0 0 20px 0;
+      }
+
+      .timeline dl {
+        margin: 0 0 30px 1em;
+      }
+
+      /*絶対配置で線を設定*/
+      .border-line {
+        /*線の位置*/
+        position: absolute;
+        left: 0.2em;
+        top: 0;
+        width: 2px;
+        /*線の太さ*/
+        height: 0;
+        /*はじめは高さを0に*/
+        background: #ccc;
+      }
+
+      /*タイムラインの見出し横の丸の位置と形状*/
+      .timeline li::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: #666;
+        border-radius: 50%;
+      }
+    </style>
   </div>
 
   <div class="part3">
     <div class="message">
-      <p>message</p>
       <div class="message_contents">
         <p>編入生クリスマスパーティ</p>
         <p>4年連続!!</p>

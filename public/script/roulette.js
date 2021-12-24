@@ -22,7 +22,7 @@ $('.btn').on('click', function() {
     $.post('/start_btn', 'name=STOP')
     mode = Mode.deceleration;
     //以降のルーレットの回転角度を決定
-    game_info.roulette.rotation = game_info.roulette.theta_target - theta + 2 * Math.PI * (Math.floor(Math.random() * 6) + 3);
+    game_info.roulette.rotation = game_info.roulette.theta_target - theta + 2 * Math.PI * (Math.floor(Math.random() * 2) + 1);
 
   } else if ($(this).val() === 'START') {
     //STARTボタンが押されたときに呼び出される
@@ -42,10 +42,10 @@ $('.btn').on('click', function() {
 
 
 const ACCEL = 0.01;
-const DECEL = 0.002;
+const DECEL = 0.007;
 const TIME_CONSTANT = 1;
 const MAX_SPEED = 1.0;
-const MIN_SPEED = 0.1;
+const MIN_SPEED = 0.05;
 const RADIUS = 100;
 const COLOR_ADJ = 0.4;
 const TRIANGLE_SIZE = 20;
